@@ -1,10 +1,23 @@
+#include <vector>
+using namespace std;
+
+
 class FunctionAnalyzer
 {
 private:
-    /* data */
+    vector<int> domain;
+    vector<char> codomain;
+    vector<char> outputs;
 public:
-    FunctionAnalyzer(/* args */);
-    ~FunctionAnalyzer();
+   void inputFunction();
+   void printMapping();
+   void printRange();
+
+
+   bool isInjective();
+    bool isSurjective();
+    bool isBijective();
+
 };
 
 
