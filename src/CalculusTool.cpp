@@ -37,3 +37,20 @@ CalculusTool::~CalculusTool() {}
             return 0;
         }
     }
+
+    double CalculusTool::derivativeAt(int functionChoice, double x) {
+    // set h to a small value
+    double h = 00000.1;
+
+    // calculate f(x + h)
+    double fxph = evaluateFunction(functionChoice, x + h);
+
+    // calculate f(x - h)
+    double fxmh = evaluateFunction(functionChoice, x - h);
+
+    // apply central difference formula
+        double derivative = (fxph - fxmh) / (2 * h);
+     // return result
+
+    return derivative;
+}
