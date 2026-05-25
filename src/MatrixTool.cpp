@@ -13,7 +13,7 @@ void   MatrixTool::printMatrix(vector<vector<double>>& matrix){
 
     for(auto& idx : matrix){
         for(auto& num : idx){
-            cout << num;
+            cout << num<< " ";
         }
           cout << "\n";
     }
@@ -45,8 +45,9 @@ bool MatrixTool::sameSize(vector<vector<double>>& matrixA, vector<vector<double>
         }
 
 
-        return true;
+       
 }
+ return true;
 }
 
 
@@ -119,6 +120,11 @@ vector<vector<double>> MatrixTool::scalarMultiplyMatrix(double scalar, vector<ve
 
 vector<vector<double>> MatrixTool::transposeMatrix( vector<vector<double>>& matrix){
 
+
+        if (matrix.empty()) {
+        cerr << "Matrix is empty\n";
+        return vector<vector<double>>();
+    }
 
     vector<vector<double>> res(matrix[0].size());
 
