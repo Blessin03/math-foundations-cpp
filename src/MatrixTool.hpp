@@ -7,8 +7,7 @@ class MatrixTool
 private:
 vector<vector<double>> matrix;
 public:
-    MatrixTool(/* args */);
-    ~MatrixTool();
+
 
 
     void printMatrix(const vector<vector<double>>& matrix);

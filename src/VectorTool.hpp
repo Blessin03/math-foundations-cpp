@@ -8,10 +8,9 @@ class VectorTool
 private:
 
 public:
-    VectorTool();
-    ~VectorTool();
 
-    vector<double> addVectors(vector<double> a, vector<double> b);
+
+vector<double> addVectors(vector<double> a, vector<double> b);
 vector<double> subtractVectors(vector<double> a, vector<double> b);
 vector<double> scalarMultiply(double scalar, vector<double> v);
 

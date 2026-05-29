@@ -12,8 +12,7 @@ private:
     vector<char> codomain;
     vector<char> outputs;
 public:
-   void inputFunction();
-   void printMapping();
+   
    void printRange();
 
 

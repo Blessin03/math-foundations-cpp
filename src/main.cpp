@@ -4,6 +4,7 @@
 #include "FunctionAnalyzer.hpp"
 #include "VectorTool.hpp"
 #include "MatrixTool.hpp"
+#include "ReportWriter.hpp"
 #include <vector>
 
 using namespace std;
@@ -13,6 +14,7 @@ int main(){
     VectorTool vectorTool;
     MatrixTool matrixTool;
     CalculusTool calculusTool;
+    ReportWriter reportWriter;
 
     // main menu loop
 
@@ -42,8 +44,7 @@ int main(){
                 break;
 
             case 2:
-                functionAnalyzer.inputFunction();
-                functionAnalyzer.printMapping();
+
                 functionAnalyzer.printRange();
 
                 cout << "Injective: " << (functionAnalyzer.isInjective() ? "Yes" : "No") << "\n";
@@ -156,6 +157,24 @@ int main(){
 
                 break;
             }
+                    case 6: {
+                        string filename = "report.txt";
+
+                        string content =
+                            "My Math Foundations Report\n"
+                            "==========================\n"
+                            "This report was exported from the program.\n";
+
+                    bool success = reportWriter.exportReport(filename, content);
+
+                    if (success) {
+                        cout << "Report exported successfully to " << filename << "\n";
+                    } else {
+                        cout << "Report export failed.\n";
+                    }
+
+                    break;
+                }
 
             case 0:
                 cout << "Exiting program.\n";

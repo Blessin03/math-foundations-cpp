@@ -4,8 +4,7 @@
 #include <stdexcept>
 using namespace std;
 
-VectorTool::VectorTool(/* args */){
-}
+
 
 vector<double> VectorTool::addVectors(vector<double> a, vector<double> b) {
 try{
